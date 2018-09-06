@@ -9,17 +9,13 @@ This simulator provides a simple tool to estimate how balanced a deck is.
 Given the number of lands in the deck as well as cards with mana cost of 1, 2, 3 and so on, it plays regular rounds of the game using a shuffled deck and records the number of cards played, lands in the territory and discarded cards.
 Rapid decks will results in quickly emptying a player's hand.
 Slower decks will show a larger number of cards in hand until later rounds.
-This tool goes beyond simple estimates of deck balance by looking at the histogram of mana costs.
-<<<<<<< Updated upstream
-Given the absence of Python based MTG engines and simulators, this project has enough reasons to exist in my humble opinion.
+This tool goes beyond simple estimates of deck balance that looks at the histogram of mana costs across cards.
+Given the scarsity of Python based MTG engines and simulators, this project has enough reasons to exist in my humble opinion.
 It can be extended in the future by including card types such as creatures, enchantments, etc. or mana producing cards using APIs and databases freely available from the web such as https://github.com/MagicTheGathering/mtg-sdk-python.
-
 
 # How to use it
 Start a Jupyter notebook server and open the open the notebook.
 It should be self explanatory.
-Given the scarsity of Python based MTG engines and simulators, this project has enough reasons to exist in my humble opinion.
-It can be extended in the future by including card types such as creatures, enchantments, etc. or mana producing cards using APIs and databases freely (?) available from the web.
 
 # Features
 - There is only one player.
