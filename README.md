@@ -30,6 +30,11 @@ It should be self explanatory.
 For now, cards are just int numbers.
 One could easily extend the simulator by creating a `Card` object with all sorts of features and introduce game rules to determine whether cards can be played or not.
 The card catalogue can be retrieved from the available Magic: The Gathering API project https://docs.magicthegathering.io/ using the Python wrapper https://github.com/MagicTheGathering/mtg-sdk-python.
+See the `load_csv_deck` notebook in which I load a deck file created with the Delver Lens app https://delverlab.com/.
+The idea would be to retrieve the relevant information for each card from the database (e.g., cost and type) and introduce basic rules when casting spells.
+For instance, an Enchant Creature cannot be cast if there are no creatures in the game.
+I can see how this can be done I'm planning to introduce it in the code.
+Ideally, one would also retrieve information about card abilities, such as mana producing cards, and a second player, and blablabla, however this is clearly out of the scope of this project and likely won't be ever introduced.
 
 # Notes
 This is the a Python based, open source, unofficial and certainly the most stupid MTG game engine I'm aware of.
