@@ -10,6 +10,7 @@ Given the number of lands in the deck as well as cards with mana cost of 1, 2, 3
 Rapid decks will results in quickly emptying a player's hand.
 Slower decks will show a larger number of cards in hand until later rounds.
 This tool goes beyond simple estimates of deck balance by looking at the histogram of mana costs.
+<<<<<<< Updated upstream
 Given the absence of Python based MTG engines and simulators, this project has enough reasons to exist in my humble opinion.
 It can be extended in the future by including card types such as creatures, enchantments, etc. or mana producing cards using APIs and databases freely available from the web such as https://github.com/MagicTheGathering/mtg-sdk-python.
 
@@ -17,14 +18,16 @@ It can be extended in the future by including card types such as creatures, ench
 # How to use it
 Start a Jupyter notebook server and open the open the notebook.
 It should be self explanatory.
+Given the scarsity of Python based MTG engines and simulators, this project has enough reasons to exist in my humble opinion.
+It can be extended in the future by including card types such as creatures, enchantments, etc. or mana producing cards using APIs and databases freely (?) available from the web.
 
 # Features
 - There is only one player.
 - Mana and cards are considered colorless.
-- There are no fights.
+- There are no card types such as creatures, sorceries, etc., except Lands, cards are just integers representing mana cost (Lands are 0-cost cards).
+- There are no combats, given there are no creatures.
 - None of the steps of the original game are considered except draw step, cast spell (part of the main phase), discard (cleanup step).
 - All the cards whose collective mana costs is lower or equal to the available mana are played, ordered by mana cost (i.e., no strategy).
-- There is no concept of card types such as creatures, sorceries, etc., cards are just integers representing mana cost.
 - A random card is discarded if a card has to be discarded.
 
 # For developers
@@ -33,10 +36,10 @@ One could easily extend the simulator by creating a `Card` object with all sorts
 The card catalogue can be retrieved from the available Magic: The Gathering API project https://docs.magicthegathering.io/ using the Python wrapper https://github.com/MagicTheGathering/mtg-sdk-python.
 
 # Notes
-This is a Python based, open source, unofficial and certainly the most stupid MTG game engine I'm aware of.
-It is certainly not a full blown MTG simulator (yet?).
-For that, you may want to have a look at https://www.slightlymagic.net/wiki/List_of_MTG_Engines
-The only other Python based open source software I found is supposed to be here https://www.slightlymagic.net/forum/viewtopic.php?f=23&t=2113 but the project seem to have disappeared from BitBucket.
+This is the a Python based, open source, unofficial and certainly the most stupid MTG game engine I'm aware of.
+This is certainly not a full blown MTG simulator (yet?).
+For that, you may want to have a look at https://www.slightlymagic.net/wiki/List_of_MTG_Engines or simply search the GitHub.
+Here is one interesting related project https://github.com/hlynurd/open-mtg.
 
 # Acknowledgments
 Magic: The Gathering is a registered trademark of Wizards of the Coast.
