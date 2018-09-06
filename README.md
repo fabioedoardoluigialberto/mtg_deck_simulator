@@ -11,7 +11,8 @@ Rapid decks will results in quickly emptying a player's hand.
 Slower decks will show a larger number of cards in hand until later rounds.
 This tool goes beyond simple estimates of deck balance by looking at the histogram of mana costs.
 Given the absence of Python based MTG engines and simulators, this project has enough reasons to exist in my humble opinion.
-It can be extended in the future by including card types such as creatures, enchantments, etc. or mana producing cards using APIs and databases freely (?) available from the web.
+It can be extended in the future by including card types such as creatures, enchantments, etc. or mana producing cards using APIs and databases freely available from the web such as https://github.com/MagicTheGathering/mtg-sdk-python.
+
 
 # How to use it
 Start a Jupyter notebook server and open the open the notebook.
@@ -29,11 +30,11 @@ It should be self explanatory.
 # For developers
 For now, cards are just int numbers.
 One could easily extend the simulator by creating a `Card` object with all sorts of features and introduce game rules to determine whether cards can be played or not.
-The card catalogue can be retrieved from the available Magic: The Gathering API project https://docs.magicthegathering.io/
+The card catalogue can be retrieved from the available Magic: The Gathering API project https://docs.magicthegathering.io/ using the Python wrapper https://github.com/MagicTheGathering/mtg-sdk-python.
 
 # Notes
-This is the a Python based, open source, unofficial and certainly the most stupid MTG game engine I'm aware of.
-This is certainly not a full blown MTG simulator (yet?).
+This is a Python based, open source, unofficial and certainly the most stupid MTG game engine I'm aware of.
+It is certainly not a full blown MTG simulator (yet?).
 For that, you may want to have a look at https://www.slightlymagic.net/wiki/List_of_MTG_Engines
 The only other Python based open source software I found is supposed to be here https://www.slightlymagic.net/forum/viewtopic.php?f=23&t=2113 but the project seem to have disappeared from BitBucket.
 
