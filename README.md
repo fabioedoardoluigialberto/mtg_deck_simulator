@@ -43,7 +43,7 @@ See the `load_csv_deck` notebook in which I load a deck file created with the De
 I then used the same strategy in mtg_sim_with_cards to create decks, save them into .dck files and use them for rapid retrieval instead of querying the web every time.
 The idea would be to retrieve the relevant information for each card from the database (e.g., cost and type) and introduce basic rules when casting spells.
 For instance, an Enchant Creature cannot be cast if there are no creatures in the game.
-I can see how this can be done I'm planning to introduce it in the code.
+I can see how this can be done but I couldn't find a way yet to distinguish enchantments (the majority can be played from round 1) from enchant creature (can be played only on creatures).
 Ideally, one would also retrieve information about card abilities, such as mana producing cards, and a second player, and blablabla, however this is clearly out of the scope of this project and likely won't be ever introduced.
 
 # Notes
