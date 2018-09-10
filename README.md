@@ -34,17 +34,26 @@ It should be self explanatory.
 Once the deck files are saved from mtg_sim_with_cards, you can skip the cells where the deck is loaded from csv since that usually takes few tens of seconds to query the web.
 You can simply load the deck from the dck files with `deck.load`.
 
-# For developers
-One could easily extend the simulator by creating a `Card` object with all sorts of features and introduce game rules to determine whether cards can be played or not.
-For now, I use only colors to correctly cover the mana costs.
-Finding a strategy to play multiple cards is not trivial but given there aren't many cards in one's hand at any time, one could easily try all combinations and play the one with which the largest number of spells can be cast.
+# Hardcore stuff
 The card catalogue is retrieved from the available Magic: The Gathering API project https://docs.magicthegathering.io/ using the Python wrapper https://github.com/MagicTheGathering/mtg-sdk-python.
 See the `load_csv_deck` notebook in which I load a deck file created with the Delver Lens app https://delverlab.com/.
 I then used the same strategy in mtg_sim_with_cards to create decks, save them into .dck files and use them for rapid retrieval instead of querying the web every time.
 The idea would be to retrieve the relevant information for each card from the database (e.g., cost and type) and introduce basic rules when casting spells.
 For instance, an Enchant Creature cannot be cast if there are no creatures in the game.
 I can see how this can be done but I couldn't find a way yet to distinguish enchantments (the majority can be played from round 1) from enchant creature (can be played only on creatures).
-Ideally, one would also retrieve information about card abilities, such as mana producing cards, and a second player, and blablabla, however this is clearly out of the scope of this project and likely won't be ever introduced.
+
+One could easily extend the simulator by extending the existing `Card` object with all sorts of encoded features and introduce game rules to determine whether cards can be played or not.
+Encoded features could list not only types but also abilities etc., basically a machine-friendly (aka, compiled) text for MTG cards.
+
+So ideally, one would also retrieve information about card abilities, such as mana producing cards, and a second player, and strategies, and blablabla, however this is clearly out of the scope of this project and likely won't be ever introduced.
+
+For now, I use only colors to correctly cover the mana costs, much easier and I think enough for the scope of the project which is purely statistical.
+However, many cards, especially modern decks, have many features that go beyond the simple ones (e.g., mana creating creatures) and good decks can make good use of these.
+Therefore, the type of statistics provided here is purely qualitative if not absolutely recreational and not indicative of the actual power of a deck.
+Consider it a start.
+
+Finding a good strategy to play multiple cards in each turn is also not trivial but given there aren't many cards in one's hand at any time, one could easily try all combinations and play the one with which the largest number of spells can be cast.
+So playing multiple cards at each turn seems doable and may be introduced in the near future.
 
 # Notes
 This is the a Python based, open source, unofficial and certainly the most stupid MTG game engine I'm aware of.
