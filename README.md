@@ -14,8 +14,10 @@ Given the scarsity of Python based MTG engines and simulators, this project has 
 It can be extended in the future by including card types such as creatures, enchantments, etc. or mana producing cards using APIs and databases freely available from the web such as https://github.com/MagicTheGathering/mtg-sdk-python.
 See below for more details.
 
-# Features
-- There is only one player.
+# Features and notes
+- mtg_sim already works but it is very limited in scope
+- mtg_sim_with_cards should be considered work in progress but it is much broader in scope
+- In both, there is only one player.
 - In mtg_sim, mana and cards are considered all colorless, i.e., only the combined mana cost is considered for each card and mana of any color is usable
 - In mtg_sim_with_cards, colors are obtained with mtg-sdk and its online database to retrieve card info and cards can be played according to the available mana for each color, including colorless
 - No card types such as creatures, sorceries, etc., are used except Lands.
@@ -49,8 +51,8 @@ So ideally, one would also retrieve information about card abilities, such as ma
 
 For now, I use only colors to correctly cover the mana costs, much easier and I think enough for the scope of the project which is purely statistical.
 However, many cards, especially modern decks, have many features that go beyond the simple ones (e.g., mana creating creatures) and good decks can make good use of these.
-Therefore, the type of statistics provided here is purely qualitative if not absolutely recreational and not indicative of the actual power of a deck.
-Consider it a start.
+Indeed, the current version of mtg_sim_with_cards throws errors with newer cards (try green Nissa, for instance) and I'll try to work on that in my spare time.
+Therefore, not only the type of statistics provided here should be considered purely qualitative if not absolutely recreational and not indicative of the actual power of a deck but the whole project should be considered just a good start of something potentially interesting for MTG players and AI people.
 
 Finding a good strategy to play multiple cards in each turn is also not trivial but given there aren't many cards in one's hand at any time, one could easily try all combinations and play the one with which the largest number of spells can be cast.
 So playing multiple cards at each turn seems doable and may be introduced in the near future.
